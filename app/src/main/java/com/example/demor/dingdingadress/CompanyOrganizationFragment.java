@@ -79,6 +79,7 @@ public class CompanyOrganizationFragment extends Fragment  {
         ft.commit();
     }
 
+    //跳转到指定层级position
     public void jumpTopFragment(int position, String groupname) {
         int count=getActivity().getSupportFragmentManager().getBackStackEntryCount();
         for (int i = 0; i < count - position; i++) {
@@ -157,6 +158,7 @@ public class CompanyOrganizationFragment extends Fragment  {
         getData(group_id);
         EventBus.getDefault().postSticky(groupname);
     }
+
     //模拟获取数据，正常应该是请求后台返回数据
     public void getData(String groupid){
         listBeans.clear();
